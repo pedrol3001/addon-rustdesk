@@ -21,7 +21,8 @@ RUN apt-get update \
     && curl -J -L -o /tmp/hbbs.deb \
         "https://github.com/rustdesk/rustdesk-server/releases/download/${RUSTDESK_VERSION}/rustdesk-server-hbbs_${RUSTDESK_VERSION}_${ARCH}.deb" \
     \
-    && dpkg --install /tmp/hbbr.deb /tmp/hbbs.deb \
+    && dpkg --install /tmp/hbbr.deb \
+    && dpkg --install /tmp/hbbs.deb \
     && rm -fr  \
         /tmp/* \
         /etc/nginx \
