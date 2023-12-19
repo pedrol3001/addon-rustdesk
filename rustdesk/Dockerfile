@@ -34,7 +34,7 @@ RUN apt-get update \
 # Copy root filesystem
 COPY rootfs /
 
-EXPOSE 21115 21116 21117 21118 21119
+EXPOSE 21115 21116 21116/udp 21117 21118 21119
 
 # Build arguments
 ARG BUILD_DATE

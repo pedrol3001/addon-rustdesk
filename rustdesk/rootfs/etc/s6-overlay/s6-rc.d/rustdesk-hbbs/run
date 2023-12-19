@@ -7,4 +7,6 @@
 
 bashio::log.info "Starting Rustdesk hbbs..."
 
-exec hbbs
+export RUST_LOG="$(bashio::config 'log_level')"
+
+exec /usr/bin/hbbs
