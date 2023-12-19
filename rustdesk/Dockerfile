@@ -5,7 +5,7 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:7.2.0
 FROM ${BUILD_FROM}
 ARG BUILD_ARCH
 
-ARG RUSTDESK_VERSION=2.9.37
+ARG RUSTDESK_VERSION=1.1.9
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
