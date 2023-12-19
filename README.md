@@ -19,10 +19,7 @@ Since [Rustdesk][rustdesk] can be self-hosted, this addon aims to create a rustd
 
 ## Features
 
-- Rustdesk self host
-- Ingress access
-- Direct connection with home assistant authentication
-- SSL support
+- Rustdesk server and relay
 
 ## Support
 
