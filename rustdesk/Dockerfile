@@ -12,7 +12,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # hadolint ignore=DL3008
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl \
+    && apt-get install -y --no-install-recommends curl systemd \
     && ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64"; fi \
     && curl -J -L -o /tmp/hbbr.deb \
@@ -21,8 +21,7 @@ RUN apt-get update \
     && curl -J -L -o /tmp/hbbs.deb \
         "https://github.com/rustdesk/rustdesk-server/releases/download/${RUSTDESK_VERSION}/rustdesk-server-hbbs_${RUSTDESK_VERSION}_${ARCH}.deb" \
     \
-    && dpkg --install /tmp/hbbr.deb \
-    && dpkg --install /tmp/hbbs.deb \
+    && dpkg --install /tmp/hbbr.deb /tmp/hbbs.deb \
     && rm -fr  \
         /tmp/* \
         /etc/nginx \
