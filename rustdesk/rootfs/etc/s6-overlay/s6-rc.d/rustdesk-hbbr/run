@@ -1,0 +1,10 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Community Add-on: NRustdesk8N
+# Runs Rustdesk script
+# ==============================================================================
+
+bashio::log.info "Starting Rustdesk hbbr..."
+
+exec hbbr
