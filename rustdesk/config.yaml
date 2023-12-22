@@ -23,7 +23,5 @@ ports_description:
   21117/tcp: Relay services
   21118/tcp: Beb clients
   21119/tcp: Web client
-map:
-  - addon_config:rw
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
