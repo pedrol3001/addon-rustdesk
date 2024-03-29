@@ -1,11 +1,11 @@
 
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:7.3.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:7.2.0
 
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 ARG BUILD_ARCH
 
-ARG RUSTDESK_VERSION=1.2.3
+ARG RUSTDESK_VERSION=1.2.3-1
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
